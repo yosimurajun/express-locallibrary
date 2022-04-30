@@ -4,7 +4,8 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
-var mongoDB = `mongodb+srv://libraryexample:example@cluster0.ajhou.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+var dev_db_url = `mongodb+srv://libraryexample:example@cluster0.ajhou.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 var mongoose = require("mongoose");
 
