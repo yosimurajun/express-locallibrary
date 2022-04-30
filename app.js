@@ -5,11 +5,11 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 var dev_db_url = `mongodb+srv://libraryexample:example@cluster0.ajhou.mongodb.net/myFirstDatabase?retryWrites=true`;
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+// const mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 var mongoose = require("mongoose");
 
-mongoose.connect(mongoDB);
+mongoose.connect(dev_db_url);
 
 var db = mongoose.connection;
 
